@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:navigationdrawer="clr-namespace:Syncfusion.Maui.Toolkit.NavigationDrawer;assembly=Syncfusion.Maui.Toolkit"
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
     xmlns:views="clr-namespace:AutonomIA.Views"
     Title="AutonomIA"
     NavigationPage.HasNavigationBar="False">
@@ -18,35 +19,24 @@
                                Margin="0,10,0,0"
                                HorizontalOptions="Center"
                                VerticalOptions="Center"/>
-                    <!--<Label Text=""
-                               Grid.Row="1"
-                               HorizontalOptions="Center"
-                               FontSize="22"
-                               FontFamily="Titulo"
-                               TextColor="White"/>-->
-                </Grid>
-            </navigationdrawer:DrawerSettings.DrawerHeaderView>
-            <navigationdrawer:DrawerSettings.DrawerContentView>
-                <VerticalStackLayout Spacing="10" Padding="10">
-                    <Button Text="Inicio" FontFamily="Normal" Clicked="GoToHome" BackgroundColor="#00C896" />
-                        <Button Text="Agenda" FontFamily="Normal" Clicked="GoToAgenda"  BackgroundColor="#00C896" />
-                        <Button Text="Notas" FontFamily="Normal" Clicked="GoToNotas" BackgroundColor="#00C896" />
-                        <Button Text="Clientes" FontFamily="Normal" Clicked="GoToClientes" BackgroundColor="#00C896" />
-                        <Button Text="Proveedores" FontFamily="Normal" Clicked="GoToProveedores" BackgroundColor="#00C896" />
-                        <Button Text="Configuración" FontFamily="Normal" Clicked="GoToConfiguracion" BackgroundColor="#00C896" />
-                </VerticalStackLayout>
-            </navigationdrawer:DrawerSettings.DrawerContentView>
-        </navigationdrawer:DrawerSettings>
+                    </Grid>
+                </navigationdrawer:DrawerSettings.DrawerHeaderView>
+                <navigationdrawer:DrawerSettings.DrawerContentView>
+                    <VerticalStackLayout Spacing="10" Padding="10">
+                            <buttons:SfButton x:Name="BTInicio" Text="Inicio" TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal"  Clicked="GoToHome"/>
+                            <buttons:SfButton x:Name="BTAgenda" Text="Agenda" TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal"  Clicked="GoToAgenda"/>
+                            <buttons:SfButton x:Name="BTNotas" Text="Notas" TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal"  Clicked="GoToNotas"/>
+                            <buttons:SfButton x:Name="BTProveedores" Text="Proveedores" TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal"  Clicked="GoToProveedores"/>
+                            <buttons:SfButton x:Name="BTClientes" Text="Clientes" TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal"  Clicked="GoToClientes"/>
+                            <buttons:SfButton x:Name="BTConfiguracion" Text="Configuración" TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal"  Clicked="GoToConfiguracion"/>
+                    </VerticalStackLayout>
+                </navigationdrawer:DrawerSettings.DrawerContentView>
+            </navigationdrawer:DrawerSettings>
         </navigationdrawer:SfNavigationDrawer.DrawerSettings>
 
         <navigationdrawer:SfNavigationDrawer.ContentView>
             <Grid RowDefinitions="Auto,*">
                 <HorizontalStackLayout BackgroundColor="#0078D4" Padding="10" Spacing="10">
-                    <!--<Button x:Name="hamburgerButton"
-                                 Text="&#xE70F;" FontSize="18" FontFamily="MaterialAssets" TextColor="Black"
-                                 BackgroundColor="#0078D4"
-                                 Clicked="hamburgerButton_Clicked"
-                                 WidthRequest="30" HeightRequest="30" Visual="Default"/>-->
                     <Button Text="&#xe719;" FontSize="18" FontFamily="MaterialAssets"  Clicked="hamburgerButton_Clicked" BackgroundColor="#0078D4" TextColor="White"/>
                     <Label x:Name="headerLabel"
                            Text="AutonomIA"
