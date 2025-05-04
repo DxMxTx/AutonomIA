@@ -23,12 +23,12 @@
                 </navigationdrawer:DrawerSettings.DrawerHeaderView>
                 <navigationdrawer:DrawerSettings.DrawerContentView>
                     <VerticalStackLayout Spacing="10" Padding="10">
-                            <buttons:SfButton x:Name="BTInicio" Text="Inicio" TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal"  Clicked="GoToHome"/>
-                            <buttons:SfButton x:Name="BTAgenda" Text="Agenda" TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal"  Clicked="GoToAgenda"/>
-                            <buttons:SfButton x:Name="BTNotas" Text="Notas" TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal"  Clicked="GoToNotas"/>
-                            <buttons:SfButton x:Name="BTProveedores" Text="Proveedores" TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal"  Clicked="GoToProveedores"/>
-                            <buttons:SfButton x:Name="BTClientes" Text="Clientes" TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal"  Clicked="GoToClientes"/>
-                            <buttons:SfButton x:Name="BTConfiguracion" Text="Configuración" TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal"  Clicked="GoToConfiguracion"/>
+                        <buttons:SfButton x:Name="BTInicio" Text="Inicio" TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal"  Clicked="GoToHome"/>
+                        <buttons:SfButton x:Name="BTAgenda" Text="Agenda" TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal"  Clicked="GoToAgenda"/>
+                        <buttons:SfButton x:Name="BTNotas" Text="Notas" TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal"  Clicked="GoToNotas"/>
+                        <buttons:SfButton x:Name="BTProveedores" Text="Proveedores" TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal"  Clicked="GoToProveedores"/>
+                        <buttons:SfButton x:Name="BTClientes" Text="Clientes" TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal"  Clicked="GoToClientes"/>
+                        <buttons:SfButton x:Name="BTConfiguracion" Text="Configuración" TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal"  Clicked="GoToConfiguracion"/>
                     </VerticalStackLayout>
                 </navigationdrawer:DrawerSettings.DrawerContentView>
             </navigationdrawer:DrawerSettings>
