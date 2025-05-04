@@ -1,0 +1,25 @@
+<ContentPage
+    x:Class="AutonomIA.Views.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Inicio">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Bienvenido a AutonomIA"
+               FontSize="28"
+               FontFamily="Titulo"
+               TextColor="White" />
+
+        <Label Text="Tu asistente inteligente para gestionar tu actividad como autónomo."
+               FontSize="16"
+               FontFamily="Normal"
+               TextColor="White" />
+
+        <!-- Acceso directo al asistente -->
+        <!--<Button Text="Pregúntale a AutonomIA 🤖"
+                FontFamily="Normal"
+                TextColor="White"
+                BackgroundColor="#00C896"
+                Clicked="AbrirEntradaNatural"/>-->
+    </VerticalStackLayout>
+</ContentPage>
