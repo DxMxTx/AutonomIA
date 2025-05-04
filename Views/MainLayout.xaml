@@ -13,27 +13,27 @@
             <navigationdrawer:DrawerSettings DrawerWidth="250" DrawerHeaderHeight="160">
                 <navigationdrawer:DrawerSettings.DrawerHeaderView>
                     <Grid BackgroundColor="#0078D4" RowDefinitions="120,40">
-                        <Image Source="superasistente.png"
+                        <Image Source="logo2.png"
                                HeightRequest="100"
                                Margin="0,10,0,0"
                                HorizontalOptions="Center"
                                VerticalOptions="Center"/>
-                    <Label Text="AutonomIA"
+                    <!--<Label Text=""
                                Grid.Row="1"
                                HorizontalOptions="Center"
                                FontSize="22"
                                FontFamily="Titulo"
-                               TextColor="White"/>
+                               TextColor="White"/>-->
                 </Grid>
             </navigationdrawer:DrawerSettings.DrawerHeaderView>
             <navigationdrawer:DrawerSettings.DrawerContentView>
                 <VerticalStackLayout Spacing="10" Padding="10">
-                    <Button Text="Inicio" FontFamily="Normal" Clicked="GoToHome" />
-                    <Button Text="Agenda" FontFamily="Normal" Clicked="GoToAgenda" />
-                    <Button Text="Notas" FontFamily="Normal" Clicked="GoToNotas" />
-                    <Button Text="Clientes" FontFamily="Normal" Clicked="GoToClientes" />
-                    <Button Text="Proveedores" FontFamily="Normal" Clicked="GoToProveedores" />
-                    <Button Text="Configuración" FontFamily="Normal" Clicked="GoToConfiguracion" />
+                    <Button Text="Inicio" FontFamily="Normal" Clicked="GoToHome" BackgroundColor="#00C896" />
+                        <Button Text="Agenda" FontFamily="Normal" Clicked="GoToAgenda"  BackgroundColor="#00C896" />
+                        <Button Text="Notas" FontFamily="Normal" Clicked="GoToNotas" BackgroundColor="#00C896" />
+                        <Button Text="Clientes" FontFamily="Normal" Clicked="GoToClientes" BackgroundColor="#00C896" />
+                        <Button Text="Proveedores" FontFamily="Normal" Clicked="GoToProveedores" BackgroundColor="#00C896" />
+                        <Button Text="Configuración" FontFamily="Normal" Clicked="GoToConfiguracion" BackgroundColor="#00C896" />
                 </VerticalStackLayout>
             </navigationdrawer:DrawerSettings.DrawerContentView>
         </navigationdrawer:DrawerSettings>
@@ -47,8 +47,7 @@
                                  BackgroundColor="#0078D4"
                                  Clicked="hamburgerButton_Clicked"
                                  WidthRequest="30" HeightRequest="30" Visual="Default"/>-->
-                    <Button Text="&#xe72c;" FontSize="18" FontFamily="MaterialAssets"  Clicked="hamburgerButton_Clicked"/>
-                    <Label Text="&#xe719;" FontFamily="MaterialAssets" />
+                    <Button Text="&#xe719;" FontSize="18" FontFamily="MaterialAssets"  Clicked="hamburgerButton_Clicked" BackgroundColor="#0078D4" TextColor="White"/>
                     <Label x:Name="headerLabel"
                            Text="AutonomIA"
                            FontSize="20"
