@@ -40,9 +40,16 @@ public partial class MainLayout : ContentPage
 
     private void GoToNotas(object sender, EventArgs e)
     {
-        //headerLabel.Text = "Notas";
-        //MainContent.Content = new NotasPage();
-        //navigationDrawer.ToggleDrawer();
+        headerLabel.Text = "Módulo de Notas";
+
+        var page = App.Services.GetService<NotaListView>();
+        MainContent.Content = new ContentView
+        {
+            Content = page.Content,
+            BindingContext = page.BindingContext
+        };
+
+        NavigationDrawer.ToggleDrawer();
     }
 
     private void GoToClientes(object sender, EventArgs e)

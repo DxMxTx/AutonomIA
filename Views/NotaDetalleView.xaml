@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfDataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
+             xmlns:sfButton="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+             x:Class="AutonomIA.Views.NotaDetalleView"
+             Title="Nota">
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <sfDataForm:SfDataForm x:Name="DataForm"
+                               AutoGenerateItems="True"
+                               DataObject="{Binding NotaActual}" />
+
+        <sfButton:SfButton Text="Guardar" Command="{Binding GuardarCommand}"
+                           TextColor="White" Background="#00C896" CornerRadius="10" FontFamily="Normal" />
+
+        <sfButton:SfButton Text="Eliminar" Command="{Binding EliminarCommand}"
+                           TextColor="White" Background="#E53935" CornerRadius="10"
+                           FontFamily="Normal" />
+    </VerticalStackLayout>
+</ContentPage>

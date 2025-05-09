@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
+             xmlns:sfButton="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+             x:Class="AutonomIA.Views.NotaListView"
+             Title="Notas">
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <sfButton:SfButton Text="Nueva Nota" Command="{Binding NuevaNotaCommand}"
+                           TextColor="White" Background="{StaticResource ColorSecundario}" CornerRadius="10" FontFamily="Normal" />
+
+        <syncfusion:SfListView x:Name="NotasView"
+                                ItemsSource="{Binding Notas}"
+                                SelectionMode="Single"
+                                SelectionChangedCommand="{Binding NotaSeleccionadaCommand}"
+                                SelectedItem="{Binding NotaSeleccionada, Mode=TwoWay}">
+            <syncfusion:SfListView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="#2D2D2D" CornerRadius="10" Padding="10" Margin="5">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Titulo}" FontFamily="Titulo" FontSize="18" />
+                            <Label Text="{Binding FechaCreacion, StringFormat='{}{0:dd/MM/yyyy HH:mm}'}"
+                                   FontFamily="Etiquetas" FontSize="12" TextColor="Gray" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </syncfusion:SfListView.ItemTemplate>
+        </syncfusion:SfListView>
+    </VerticalStackLayout>
+</ContentPage>

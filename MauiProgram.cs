@@ -2,6 +2,11 @@ using Microsoft.Extensions.Logging;
 using Syncfusion.Licensing;
 using Syncfusion.Maui.Core.Hosting;
 using Syncfusion.Maui.Toolkit.Hosting;
+using AutonomIA.Data;
+using AutonomIA.Models;
+using AutonomIA.Services;
+using AutonomIA.ViewModels;
+using AutonomIA.Views;
 
 namespace AutonomIA
 {
@@ -25,13 +30,31 @@ namespace AutonomIA
                     fonts.AddFont("Montserrat-Bold.ttf", "Titulo");
                     fonts.AddFont("Montserrat-Regular.ttf", "Normal");
                     fonts.AddFont("Montserrat-Light.ttf", "Etiquetas");
+                    fonts.AddFont("Segoe UI.ttf", "SegoeUI");
                 });
 
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            string dbPath = Path.Combine(FileSystem.AppDataDirectory, "autonomia.db");
+            var repo = new GenericRepository(dbPath);
+            repo.CreateTableAsync<Nota>().Wait();
 
-            return builder.Build();
+            // Registro de servicios
+            builder.Services.AddSingleton(repo);
+            builder.Services.AddSingleton<NotaService>();
+
+            // Registro de viewmodels
+            builder.Services.AddTransient<NotaListViewModel>();
+            builder.Services.AddTransient<NotaDetalleViewModel>();
+
+            // Registro de vistas
+            builder.Services.AddTransient<NotaListView>();
+            builder.Services.AddTransient<NotaDetalleView>();
+
+            var app = builder.Build();
+            App.Services = app.Services;
+            return app;
         }
     }
 }
